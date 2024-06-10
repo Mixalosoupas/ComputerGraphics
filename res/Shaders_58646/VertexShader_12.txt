@@ -1,0 +1,12 @@
+#version 330 core 
+
+layout (location = 0) in vec3 inputPosition;
+uniform mat4 transform;
+
+
+
+
+void main() 
+{ 
+	gl_Position =  transform * vec4(inputPosition.x, inputPosition.y, inputPosition.z, 1.0);
+}	
